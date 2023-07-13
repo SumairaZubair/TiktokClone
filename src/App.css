@@ -1,0 +1,53 @@
+sn
+.element {
+  /* scroll-snap-align: start; */
+}
+
+html {
+	scroll-snap-type: y mandatory;
+}
+
+.app {
+	height: 100vh;
+	background-color: black;
+	display: grid;
+	place-items: center;
+}
+
+.container {
+	position: relative;
+	height: 90vh;
+	border-radius: 20px;
+	overflow: scroll;
+	width: 50.625vh;
+	scroll-snap-type: y mandatory;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* .video {
+    position: relative;
+    scroll-snap-align: start;
+}
+.video::before {
+  content: '';
+  display: block;
+  box-shadow: 0 -33px 48px rgba(0, 0, 0, 0.5) inset;
+  width: 100%;
+  pointer-events: none;
+  z-index: 99;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: transparent;
+} */
