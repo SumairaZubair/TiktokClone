@@ -2,15 +2,22 @@ import React, { useState } from 'react'
 import './FooterRight.css'
 
 function FooterRight({ likes, shares, messages }){
-  const [liked,setLiked]=useState(likes)
+	const [liked, setLiked] = useState(false)
+    const [likeCount, setLikeCount] = useState(likes);
+
   return(
     
 <div className="footer-right">
 	<div className="sidebar-icon">
-
+       {liked ? <i class="fa-solid fa-heart" id='heart'></i> 
+	   :<i class="fa-regular fa-heart" onClick={() => {
 		
-     <i class="fa-regular fa-heart" style={{color:'red',fontSize:'1.7rem'}} onClick={()=>setLiked(likes + 1)} ></i>
-		<p>{liked}</p>
+		setLiked(true);
+		setLikeCount((likes) => likes + 1);
+	}}></i>};
+
+
+		<p>{likeCount}</p>
 	</div>
 	<div className="sidebar-icon">
 		
@@ -24,7 +31,7 @@ function FooterRight({ likes, shares, messages }){
 		<p>{shares}</p>
 	</div>
 	<div className="sidebar-icon record">
-		<img src="https://static.thenounproject.com/png/934821-200.png" alt='disc' style={{width: '40px',height: '40px'}}/>
+		<img className='img' src="https://static.thenounproject.com/png/934821-200.png" alt='disc'/>
 	</div>
 </div>)
 }

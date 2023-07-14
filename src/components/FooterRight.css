@@ -14,6 +14,18 @@
     align-items: center;
     text-align: center;
 }
+#heart{
+    color: red;
+    font-size: 1.7rem;
+}
+i{
+    font-size: 1.7rem;
+
+}
+.img{
+    width: 40px;
+    height: 40px;
+}
 
 .record {
     animation: 5s infinite spinTheRecord;
